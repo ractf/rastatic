@@ -27,7 +27,7 @@ class StaticHandler(Module):
             shutil.copy(self.input, render.dest + '/' + self.output)
         else:
             self.log(f'Copying static files')
-            shutil.copytree(self.input, render.dest + '/' + self.output, ignore=self.logpath, dirs_exist_ok=True)
+            shutil.copytree(self.input, render.dest + '/' + self.output, ignore=self.logpath)
 
         render.watch(self.input)
     
