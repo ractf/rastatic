@@ -1,6 +1,8 @@
 import shutil
 import os
 
+from watchdog.events import FileModifiedEvent, FileCreatedEvent, FileDeletedEvent
+
 from . import Module
 
 class StaticHandler(Module):
